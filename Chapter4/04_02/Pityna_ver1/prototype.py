@@ -41,28 +41,28 @@ class Pityna:
         # Pitynaクラスの名前を取得し戻り値にする
         return self.name
     
-    class Responder:
-        """ 応答クラス
+class Responder:
+    """ 応答クラス
+    """
+    def __init__(self, name):
+        """ Responderオブジェクトの名前をnameに格納
+
+        Args:
+            name (str): Responderオブジェクトの名前
         """
-        def __init__(self, name):
-            """ Responderオブジェクトの名前をnameに格納
+        self.name = name
 
-            Args:
-                name (str): Responderオブジェクトの名前
-            """
-            self.name = name
+    def response(self, input):
+        """ 応答文字列を作って返す
 
-        def response(self, input):
-            """ 応答文字列を作って返す
+        Args:
+            input (str): ユーザーが入力した文字列
 
-            Args:
-                input (str): ユーザーが入力した文字列
-
-            Returns:
-                str: 応答メッセージ
-            """
-            # オウム返しの返答をする
-            return '{}ってなに?'.format(input)
+        Returns:
+            str: 応答メッセージ
+        """
+        # オウム返しの返答をする
+        return '{}ってなに?'.format(input)
     
 ##########################################################################################
 # 実行ブロック
@@ -76,7 +76,7 @@ def prompt(obj):
         str: ピティナのプロンプト用文字列
     """
     # '「Pitynaオブジェクト名:応答オブジェクト名 >'の文字列を返す」
-    return obj.get_name() + ':' + obj.get_responder_name() + '>'
+    return obj.name() + ':' + obj.get_responder_name() + '>'
 
 # ここからプログラム開始
 # プログラムの情報を表示
