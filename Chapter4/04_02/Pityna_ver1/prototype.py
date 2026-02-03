@@ -82,7 +82,7 @@ def prompt(obj):
 # プログラムの情報を表示
 print('Pityna System protopype : Pityna')
 # Pitynaオブジェクトを生成
-pityna = pityna('Pityna')
+pityna = Pityna('Pityna')
 
 # 対話処理開始
 while True:
@@ -91,4 +91,7 @@ while True:
         print('バイバイ')
         break
     else:
-        
+        # 応答文字列を取得
+        response = pityna.dialogue(inputs)
+        # プロンプトと応答文字列をつなげて表示
+        print(prompt(pityna), response)
