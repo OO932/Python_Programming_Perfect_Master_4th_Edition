@@ -76,7 +76,7 @@ def prompt(obj):
         str: ピティナのプロンプト用文字列
     """
     # '「Pitynaオブジェクト名:応答オブジェクト名 >'の文字列を返す」
-    return obj.name() + ':' + obj.get_responder_name() + '>'
+    return obj.get_name() + ':' + obj.get_responder_name() + '>'
 
 # ここからプログラム開始
 # プログラムの情報を表示
