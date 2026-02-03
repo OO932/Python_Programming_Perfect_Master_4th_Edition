@@ -11,4 +11,33 @@ class Pityna:
         self.name = name
         # Responderオブジェクトを生成してインスタンス変数に代入
         self.responder = Responder('Repeat')
-        
+
+    def dialogue(self, input):
+        """ 応答オブジェクトのresponse()を呼び出して応答文字列を取得する
+
+        Args:
+            input (str): ユーザーの発言
+
+        Returns:
+            str: 応答文字列
+        """
+        # response()メソッドを実行し､戻り値(応答文字列)をそのまま返す
+        return self.responder.response(input)
+    
+    def get_responder_name(self):
+        """応答に使用されたオブジェクト名を返す
+
+        Returns:
+            str: 応答オブジェクトの名前 
+        """
+        # responderに格納されているオブジェクト名を取得し戻り値にする
+        return self.responder.name
+    
+    def get_name(self):
+        """Pitynaオブジェクトの名前を返す
+        Returns:
+            str: Pitynaクラスの名前
+        """
+        # Pitynaクラスの名前を取得し戻り値にする
+        return self.name
+    
