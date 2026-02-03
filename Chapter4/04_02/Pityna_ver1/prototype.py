@@ -64,3 +64,31 @@ class Pityna:
             # オウム返しの返答をする
             return '{}ってなに?'.format(input)
     
+##########################################################################################
+# 実行ブロック
+##########################################################################################
+def prompt(obj):
+    """ピティナのプロンプトを作る関数
+
+    Args:
+        obj (object): 呼び出し元のPitynaオブジェクト
+    Returns:
+        str: ピティナのプロンプト用文字列
+    """
+    # '「Pitynaオブジェクト名:応答オブジェクト名 >'の文字列を返す」
+    return obj.name() + ':' + obj.get_responder_name() + '>'
+
+# ここからプログラム開始
+# プログラムの情報を表示
+print('Pityna System protopype : Pityna')
+# Pitynaオブジェクトを生成
+pityna = pityna('Pityna')
+
+# 対話処理開始
+while True:
+    inputs = input(' > ')
+    if not inputs:
+        print('バイバイ')
+        break
+    else:
+        
